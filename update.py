@@ -29,9 +29,9 @@ def get_local_update_time() -> str:
         return ""
 
 
-def write_local_rdpwrap(s):
-    with open(r"C:\Program Files\RDP Wrapper\rdpwrap.ini", "w") as fd:
-        fd.write(s)
+def write_local_rdpwrap(s:str):
+    with open(r"C:\Program Files\RDP Wrapper\rdpwrap.ini", "wb") as fd:
+        fd.write(s.encode())
 
 
 try:
